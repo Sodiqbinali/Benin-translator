@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Benin Language Translator</title>
 </head>
 <body>
-    
+    <div class="lang-box">
+        <h2>Benin Language Translator</h2>
+        <form>
+          <div class="langOpt1" style="display: none;">
+            <select>
+              <option value="en">English</option>
+              <option value="ha">Hausa</option>
+              <option value="yo">Yoruba</option>
+              <option value="ig">Igbo</option>
+            </select>
+          </div>
+          <label class="biniLabel1">Edo Bini</label>
+          <div class="textBox">
+            <textarea spellcheck="false" class="from-text" placeholder="Enter text"></textarea>
+          </div>
+          <div class="midIcon">
+            <div class="icon">
+              <img src="./exchange.png">
+             </div>
+          <div class="langOpt2">
+            <select>
+              <option value="en">English</option>
+              <option value="ha">Hausa</option>
+              <option value="yo">Yoruba</option>
+              <option value="ig">Igbo</option>
+            </select>
+          </div>
+          <label class="biniLabel2" style="display: none;">Edo Bini</label>
+          </div>
+            <div class="textBox">
+             <textarea class="to-text" id="eng" spellcheck="false" disabled placeholder="Translation"></textarea>
+            </div>
+        </form>
+          <i class="fas fa-exchange-alt exchange"></i>
+        <button>Translate Text</button>
+      </div> 
 </body>
 </html>
