@@ -1,0 +1,68 @@
+html {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #8da7c5);
+  }
+
+  .lang-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+  }
+
+  .lang-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+
+  .lang-box .textBox {
+    position: relative;
+    margin: 1em;
+  }
+
+   button{
+    width: 100%;
+    padding: 14px;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+    border-radius: 5px;
+    background: #141e30;
+  }
+
+  label {
+    color: white;
+  }
+
+.icon:hover {
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  height: 7em;
+  background-color: white;
+  font-size: 15px;
+}
+
+.midIcon {
+  display: flex; 
+  gap: 5rem;
+}
