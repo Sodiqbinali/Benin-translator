@@ -28,3 +28,14 @@ icon.addEventListener('click', () => {
       biniLabel2.display = 'none';
     }
   })
+
+  const  translate = async (text, target) => {
+    const API_KEY = "AIzaSyCQJl_k_9cS7F7XA09K-H5DT2pAHApdnKA";
+    toText.setAttribute("placeholder", "Translating...");
+      let res = await axios.post(
+      `https://translation.googleapis.com/language/translate/v2?key=${API_KEY}`,
+      { q: text, target }
+      );
+      let translation = res.data.data.translations[0].translatedText;
+      return translation;
+    }
