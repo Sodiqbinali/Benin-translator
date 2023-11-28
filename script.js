@@ -1,0 +1,10 @@
+const langOpt1 = document.querySelector('.langOpt1').style,
+langOpt2 = document.querySelector('.langOpt2').style,
+biniLabel1 = document.querySelector('.biniLabel1').style,
+biniLabel2 = document.querySelector('.biniLabel2').style,
+icon = document.querySelector('img'),
+fromText = document.querySelector('.from-text'),
+toText = document.querySelector('.to-text'),
+btn = document.querySelector('button'),
+selectTag = document.querySelectorAll("select"),
+radio1 = document.querySelector('#eng');
