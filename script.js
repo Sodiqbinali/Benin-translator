@@ -92,3 +92,37 @@ icon.addEventListener('click', () => {
       fromText.addEventListener("keyup", () => {
             toText.value = "";
     });
+    btn.addEventListener('click', () => {
+      toText.value = "";
+      if(langOpt1.display == 'none'){
+          let text= fromText.value,
+            translateTo = selectTag[1].value;
+          if(translateTo === "en"){
+            toText.value = transBini(); 
+          } else {
+            let entext = transBini();
+            translate(entext, translateTo).then((result)=>{
+              toText.value = result;
+              toText.setAttribute("placeholder", "Translation");
+            });        
+            
+          }
+      } else {
+         let translateFrom = selectTag[0].value;
+          if (translateFrom === "en"){
+            let word = fromText.value.toLowerCase().trim().split(" ");
+              toText.value = transEnglish(word);
+          }
+          else {
+            let translateTo = "en";
+            let text = fromText.value.trim();
+            translate(text, translateTo).then((result)=>{
+                   console.log(result);
+                    toText.value = transEnglish(result.toLowerCase().trim().split(" ")); 
+                    toText.setAttribute("placeholder", "Translation");   
+            });
+            
+          }
+      }
+    
+    })
