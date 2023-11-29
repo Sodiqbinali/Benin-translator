@@ -66,3 +66,29 @@ icon.addEventListener('click', () => {
         }
             return trans;
       }
+      function transEnglish(word){
+        console.log(word);
+        let trans = "";
+        for (let i = 0; i < word.length; i++) {
+          if (Object.values(edobini).includes(word[i])) {
+            
+            if (trans == "") {
+                  trans = Object.keys(edobini).find(key => edobini[key] === word[i]);
+                } else {
+                  trans = trans + " " + Object.keys(edobini).find(key => edobini[key] === word[i]);
+                }
+          }
+          else {
+            if (trans == "") {
+                  trans = word[i];
+                } else {
+                  trans = trans + " " +  word[i];
+                }
+          }
+        }
+            return trans;
+      }
+    
+      fromText.addEventListener("keyup", () => {
+            toText.value = "";
+    });
