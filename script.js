@@ -39,3 +39,30 @@ icon.addEventListener('click', () => {
       let translation = res.data.data.translations[0].translatedText;
       return translation;
     }
+    function transBini() {
+      
+      let word = fromText.value.toLowerCase().trim().split(" ");
+        
+        let trans = "";
+        for (let i = 0; i < word.length; i++) {
+          if (edobini.hasOwnProperty(word[i])) {
+            for (const key in edobini) {
+              if (key == word[i]) {
+                if (trans == "") {
+                  trans = edobini[key].charAt(0).toUpperCase() + edobini[key].slice(1)
+                } else {
+                  trans = trans + " " + edobini[key];
+                }
+              }
+            }
+          }
+          else {
+            if (trans == "") {
+                  trans = word[i];
+                } else {
+                  trans = trans + " " +  word[i];
+                }
+          }
+        }
+            return trans;
+      }
